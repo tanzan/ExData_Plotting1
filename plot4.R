@@ -2,6 +2,8 @@ source("load_data.R")
 
 data <- load_data()
 
+png("plot4.png")
+
 par(mfcol=c(2,2))
 
 with(data,plot(Time,Global_active_power,type="l",xlab="",ylab="Global Active Power"))
@@ -16,3 +18,4 @@ legend("topright", legend=c("Sub_metering_1","Sub_metering_2","Sub_metering_3"),
 
 with(data,plot(Time,Global_reactive_power,type="l",xlab="datetime",ylab="Global_reactive_power"))
 
+dev.off()
